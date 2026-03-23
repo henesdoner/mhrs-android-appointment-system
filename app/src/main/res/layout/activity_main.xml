@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Akıllı Randevu Sistemi"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1976D2"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/etSikayet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Şikayetinizi yazın (Örn: Karnım ağrıyor)"
+        android:padding="15dp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnSorgula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hangi Bölüme Gitmeliyim?"
+        android:backgroundTint="#1976D2"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"/>
+
+    <TextView
+        android:id="@+id/tvSonuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sonuç burada görünecek"
+        android:textSize="18sp"
+        android:layout_marginTop="40dp"
+        android:textStyle="italic"
+        android:textColor="#333333"/>
+
+</LinearLayout>
