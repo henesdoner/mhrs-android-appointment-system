@@ -15,15 +15,19 @@ This repository contains a professional Android application designed to simulate
 - **Automated QA:** Unit tests implemented to verify the reliability of the department recommendation algorithm.
 - **Modular Architecture:** Separation of UI components and business logic for scalability and maintainability.
 
+## Architecture
+The application follows a basic modular structure separating UI and logic layers.
+
 ## Application Screenshots
 
 <p align="center">
-  <img src="screenshots/screen1.png" width="19%" />
-  <img src="screenshots/screen2.png" width="19%" />
-  <img src="screenshots/screen3.png" width="19%" />
-  <img src="screenshots/screen4.png" width="19%" />
-  <img src="screenshots/screen5.png" width="19%" />
+  <img src="screen1.png" width="19%" />
+  <img src="screen2.png" width="19%" />
+  <img src="screen3.png" width="19%" />
+  <img src="screen4.png" width="19%" />
+  <img src="screen5.png" width="19%" />
 </p>
+
 <p align="center">
   <i>User Flow: Login, Registration, Department Selection, Appointment Booking, and Management.</i>
 </p>
