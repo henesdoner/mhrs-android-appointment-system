@@ -1,24 +1,43 @@
 # MHRS Android Hospital Appointment System
 
-This repository contains a professional Android application designed to simulate the Central Physician Appointment System (MHRS). The project demonstrates core software engineering principles, local/cloud data integration, and automated testing.
+This project is an Android-based hospital appointment system inspired by Turkey’s Central Hospital Appointment System (MHRS). It aims to simulate a real-world healthcare booking workflow, allowing users to manage appointments through a mobile application.
+
+## Overview
+The application provides a structured system where users can select hospitals, choose departments and doctors, and book available time intervals. It focuses on building a scalable and maintainable mobile system using core software engineering principles.
 
 ## Technical Stack
 - **Language:** Java
 - **Platform:** Android SDK
-- **Database:** Firebase Realtime Database & SQLite
-- **Build System:** Gradle (Kotlin DSL)
-- **Testing:** JUnit Framework
+- **Database:** SQLite (local storage) + Firebase Realtime Database (cloud synchronization)
+- **Build System:** Gradle
+- **Testing:** JUnit
 
-## Core Features
-- **Symptom Analysis Module:** An NLP-based logic that recommends the appropriate medical department based on user-submitted symptoms.
-- **Real-time Data Sync:** Integration with Firebase for secure appointment tracking and data persistence.
-- **Automated QA:** Unit tests implemented to verify the reliability of the department recommendation algorithm.
-- **Modular Architecture:** Separation of UI components and business logic for scalability and maintainability.
+## Features
+- User registration and login system
+- Hospital selection
+- Department and doctor selection
+- Appointment booking with time interval selection
+- Appointment state management (availability tracking)
+- Admin panel for adding/removing hospitals and doctors (for testing/debugging)
 
-## Architecture
-The application follows a basic modular structure separating UI and logic layers.
+## Architecture & Design
+The system is designed with a modular structure including:
+- User management module
+- Hospital & doctor database structure
+- Appointment scheduling system
 
-## Application Screenshots
+The database follows a relational design:
+- Hospitals contain multiple doctors
+- Doctors have multiple available time intervals
+- Appointments are linked to users and update availability status
+
+This structure ensures data consistency and scalability.
+
+## Data Management
+- **SQLite** is used for local data persistence and offline access
+- **Firebase Realtime Database** is integrated for cloud synchronization and data reliability
+
+## Screenshots
 
 <p align="center">
   <img src="screen1.png" width="19%" />
@@ -29,11 +48,36 @@ The application follows a basic modular structure separating UI and logic layers
 </p>
 
 <p align="center">
-  <i>User Flow: Login, Registration, Department Selection, Appointment Booking, and Management.</i>
+  <i>User Flow: Login → Hospital Selection → Department & Doctor Selection → Appointment Booking</i>
 </p>
 
-## Engineering Quality (QA)
-The project emphasizes reliability through systematic testing. The `app/src/test` directory contains JUnit test cases that validate the core decision-making logic of the system, ensuring high data integrity and functional accuracy.
+## Testing
+Basic unit tests are implemented using JUnit to verify:
+- Appointment booking logic
+- Department recommendation logic (symptom-based mapping)
+
+Example:
+- Input: "başım ağrıyor"  
+- Output: "Neurology"  
+
+## Challenges
+- Learning Android development from scratch
+- Debugging performance issues in Android Studio
+- Managing data consistency between local and cloud databases
+- Handling appointment availability logic
+
+## Ongoing Development
+- Accessibility mode for elderly users (larger fonts, high contrast UI)
+- Improved UI/UX design
+- Enhanced cloud integration
+- Symptom-based department recommendation system
+
+## Future Improvements
+- Full authentication and security system
+- REST API integration
+- More advanced recommendation algorithms
+- Nationwide scalability
 
 ---
-*Developed as a Computer Engineering Project.*
+
+Developed as a Computer Engineering project.
